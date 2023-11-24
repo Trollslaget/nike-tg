@@ -4,7 +4,7 @@ const cors = require("cors");
 const firebase = require("firebase");
 require("firebase/storage");
 const token = "6237501658:AAElqLHVDgMr0wnd-CaUq_2GUHm3zULJA_E";
-const webAppUrl = "https://lovely-vacherin-b7250e.netlify.app";
+const webAppUrl = "https://nike-eosin.vercel.app";
 
 const bot = new TelegramBot(token, { polling: true });
 const app = express();
