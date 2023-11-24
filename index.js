@@ -37,7 +37,7 @@ bot.on("message", async (msg) => {
 	function findProductById(itemSKU) {
 		return products.items.find((product) => product.itemSKU === itemSKU);
 	}
-	if (text?.startsWith("/search")) {
+	if  (text && text.startsWith("/search")) {
 		// Извлекаем itemId из команды
 		const itemIdToSearch = text.split(" ");
 
