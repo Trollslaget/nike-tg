@@ -66,10 +66,9 @@ bot.on("message", async (msg) => {
 			}
 		);
 	}
-	if (msg?.web_app_data?.data) {
+	if (msg && msg.web_app_data && msg.web_app_data.data) {
 		try {
-			const data = JSON.parse(msg?.web_app_data?.data);
-
+			const data = JSON.parse(msg.web_app_data.data);
 			await bot.sendPhoto(chatId, data.itemImage, {
 				caption: `Ваш товар: ${data.itemText}\nВыбранный размер: ${data.itemSize}\nЦена: ${data.itemPrice} ₽\nАртикул товара:  <code>${data.itemSKU}</code> \nДля заказа напишите менеджеру @berlinsilencer артикул и размер, или перешлите ему это сообщение`,
 				parse_mode: "HTML",
